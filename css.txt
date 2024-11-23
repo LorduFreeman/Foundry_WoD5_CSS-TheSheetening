@@ -1,0 +1,593 @@
+@import url('https://fonts.googleapis.com/css?family=Vollkorn');
+
+:root{
+    --color-shadow-highlight: var(--player-color);
+    --vampire-primary: var(--player-color);
+	--color-shadow-primary: white;
+	
+  --vampire-color-1: var(--vampire-primary) !important;
+  --vampire-color-2: color-mix(in srgb, var(--vampire-primary), #fff 10%) !important;
+  --vampire-color-3: color-mix(in srgb, var(--vampire-primary), #fff 20%) !important;
+  --vampire-color-4: color-mix(in srgb, var(--vampire-primary), #fff 60%) !important;
+	
+ /* --system-dark-color-4: color-mix(in srgb, var(--player-color), white 30%) !important; */
+}
+/*--- Arti UI Stylings ---*/
+html:has(#app-fvtt-artificer-ui[data-sidebar-enabled="true"]) #sidebar #sidebar-tabs .collapse {
+    align-items: center;
+    background-color: var(--player-color);
+    border-radius: 0;
+    color: white;
+    left: calc(var(--sidebar-width-collapsed)  / 2 + 1.8em);
+	border-color: var(--player-color, var(--color-border-highlight-alt));
+    border-bottom-color: var(--player-color, var(--color-border-highlight-alt));
+    box-shadow: 0 0 5px var(--player-color, var(--color-border-highlight-alt));
+}
+
+html:has(#app-fvtt-artificer-ui[data-sidebar-enabled="true"]) #sidebar #sidebar-tabs:before {
+    content: "";
+    background-image: none;
+}
+html:has(#app-fvtt-artificer-ui[data-sidebar-enabled="true"][data-sidebar-theme="true"]) body #sidebar #sidebar-tabs .item.active{
+    border-color: var(--player-color, var(--color-border-highlight-alt));
+    border-bottom-color: var(--player-color, var(--color-border-highlight-alt));
+    box-shadow: 0 0 5px var(--player-color, var(--color-border-highlight-alt));
+    background-color: rgba(var(--player-color-rgb), var(--ui-background-color-alpha));
+	border-radius: 0;
+}
+html:has(#app-fvtt-artificer-ui[data-controls-enabled="true"]):has(#app-fvtt-artificer-ui:not([data-controls-style="default"])) #controls ol.control-tools > li.active, html:has(#app-fvtt-artificer-ui[data-controls-enabled="true"]):has(#app-fvtt-artificer-ui:not([data-controls-style="default"])) #controls ol.control-tools > li:hover {
+    border-color: var(--player-color, var(--color-border-highlight-alt));
+    border-bottom-color: var(--player-color, var(--color-border-highlight-alt));
+    box-shadow: inset 0 0 4px 0px var(--player-color, var(--color-border-highlight-alt));
+}
+html:has(#app-fvtt-artificer-ui[data-controls-enabled="true"]):has(#app-fvtt-artificer-ui:not([data-controls-style="default"])) #controls ol.control-tools > li.control-tool.toggle {
+    background: #5757572e;
+    border-color: dimgrey;
+}
+html:has(#app-fvtt-artificer-ui[data-controls-enabled="true"]):has(#app-fvtt-artificer-ui:not([data-controls-style="default"])) #controls ol.control-tools > li.control-tool.toggle.active {
+    text-shadow: none;
+    color: var(--player-color);
+}
+html:has(#app-fvtt-artificer-ui[data-sidebar-enabled="true"][data-sidebar-theme="true"]) body #sidebar #sidebar-tabs .item:hover {
+    border-color: var(--player-color, var(--color-border-highlight-alt));
+    border-radius: 0;
+    box-shadow: 0 0 5px var(--player-color, var(--color-border-highlight-alt));
+    text-shadow: none;
+}
+/* Arti + V5 CSS */
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) .chat-message {
+    background: none;
+    -webkit-backdrop-filter: blur(var(--ui-Glassmorphism));
+    backdrop-filter: blur(var(--ui-Glassmorphism));
+    color: var(--color-text-light-1);
+}
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) #sidebar #chat #chat-form textarea {
+    -webkit-backdrop-filter: blur(var(--ui-Glassmorphism));
+    backdrop-filter: blur(var(--ui-Glassmorphism));
+	color: var(--color-text-light-1);
+    border: 1px solid var(--player-color);
+	max-height: 20px;
+}
+* {
+scrollbar-color: var(--player-color) var(--color-scrollbar-track);
+}
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) .chat-message .message-header {
+    color: var(--color-text-light-4);
+}
+.chat-message {
+    border: 4px double var(--player-color);
+}
+.roll-label:nth-of-type(1) {
+    border-bottom: 4px double var(--player-color);
+}
+.chat-message .modifiers .mod {
+    border-radius: 2px;
+	color: var(--system-color-4);
+    background-color: var(--player-color);
+}
+#sidebar-tabs {
+    box-shadow: 0 0 10px var(--player-color);
+}
+.wod5e .dialog-contents .dice-group-header {
+    background-color: var(--vampire-primary);
+}
+.wod5e.item .window-content input {
+    border: 1px solid var(--vampire-primary);
+}
+
+h1 {
+    border-bottom: 2px solid var(--player-color);
+}
+/* Bad Die Number Text Alignment fix */
+html:has(#app-fvtt-artificer-ui[data-sidebar-chat-enabled="true"]) #sidebar #chat #chat-log li.roll {
+    text-align: center;
+}
+.rollable:hover, .rollable:focus, .power-rollable:hover, .power-rollable:focus, .edge-rollable:hover, .edge-rollable:focus, .gift-rollable:hover, .gift-rollable:focus {
+    text-shadow: 1px 1px 4px var(--player-color);
+}
+.wod5e.window-app .window-resizable-handle {
+  border-top: 3px double var(--player-color);
+  border-left: 3px double var(--player-color);
+  border-bottom: 1px solid var(--player-color);
+  border-radius: 0;
+}
+.fa-arrows-alt-h::before, .fa-left-right::before {
+    color: var(--player-color);	
+}
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) #chat-controls .roll-type-select {
+    background: unset;
+    border: 1px solid var(--player-color);
+    border-radius: 0;
+    color: var(--color-text-light-highlight);
+}
+#chat-controls .control-buttons a {
+    display: inline-block;
+    width: 20px;
+    text-align: center;
+    color: var(--player-color);
+}
+/* Chat Portrait */
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) .message img.chat-portrait-message-portrait-generic {
+    margin: 0;
+    top: 0;
+    right: 0;
+    border-radius: 0;
+    position: absolute;
+    z-index: -10;
+    mask-image: linear-gradient(to left, white 0%, #0000004d 60%, transparent 100%);
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: auto;
+    width: 30%;
+    box-shadow: 0px solid var(--player-color);
+}
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) p.roll-label.uppercase {
+    color: unset;
+    -webkit-text-stroke: 2px color-mix(in srgb, var(--player-color), #ffffff00 70%);
+    paint-order: stroke fill;
+}
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) .chat-message .message-header {
+    color: var(--color-text-light-3);
+	-webkit-text-stroke: 1px color-mix(in srgb, var(--player-color), #ffffff00 50%);
+    paint-order: stroke fill;
+}
+html:has(#app-fvtt-artificer-ui[data-theme-glass="true"]) .chat-message .message-header .message-sender {
+	-webkit-text-stroke: 1px color-mix(in srgb, var(--player-color), #ffffff00 50%);
+    paint-order: stroke fill;
+    color: var(--color-text-light-2);
+    font-weight: 500;
+}
+.roll-img.hunger-dice {
+    background: var(--player-color);
+    border-color: #330300;
+	border-color: rgb(200 200 200);
+}
+html:has(#app-fvtt-artificer-ui[data-sidebar-enabled="true"]) #minimized-bar {
+    border-radius: 0;
+    border: 4px double var(--player-color);
+}
+.window-app.minimized .window-header {
+    border: 0;
+}
+.chat-message .message-header .message-metadata {
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+	transition-delay: 1s;
+}
+.chat-message .message-header .message-metadata:hover {
+    opacity: 1;
+    transition: 1s ease-in-out;
+		transition-delay: 0.5s;
+}
+#context-menu.expand-down {
+    border-top: 0;
+    top: 0px;
+}
+#context-menu.expand-up {
+    bottom: calc(100% + 4px);
+    border-bottom: 0;
+}
+/* old Context Menu
+#context-menu {
+    width: 103%;
+    left: -4px;
+    border: 4px solid var(--player-color);
+    border-radius: 0;
+}
+*/
+#context-menu {
+    width: 101%;
+    left: -1px;
+    border: 1px solid var(--player-color);
+    border-radius: 0;
+}
+.chat-portrait-image-size-name-generic {
+    margin: 0;
+    margin-right: 0.5em;
+    border: 0;
+    width: 20px;
+    height: 20px;
+}
+header.flexrow.flex-group-left {
+    margin-bottom: 5px;
+	padding: 2px;
+	border-radius:0;
+}
+.wod5e .window-content .sheet-body .tab > .resource-label, .wod5e .actor-header .profile-img-zone h1, .wod5e .items-list .item-header, .wod5e .items-list .spc-item-header {
+    color: var(--vampire-primary);
+    border-bottom: 4px double var(--vampire-primary);
+}
+li.item.flexcol.collapsible-container {
+    margin-left: 0.5rem;
+}
+#hotbar.locked #macro-list {
+    border-color: var(--vampire-primary);
+    border-radius: 0;
+}
+/* Temporarily move scene/player config widget to the right for use with macro bar */
+
+.taskbar {
+    left: 30rem;
+}
+
+/* Taskbar customization */
+.taskbar-container {
+    border-radius: 0;
+    border: 1px solid var(--player-color);
+    box-shadow: 0 0 6px var(--player-color);
+}
+
+.taskbar-item:not(.hotbar-controls):hover {
+	background: var(--color-header-background);
+	border-color: var(--player-color);
+	color: var(--player-color);
+	box-shadow: 0 0 3px var(--player-color);
+}
+/* Beyond20 Logo disable */
+.beyond20-settings {
+    display: none;
+}
+
+img.beyond20-settings-logo {
+    display: none;
+}
+
+/* STYLISH SETTINGS */
+.wod5e.window-app {
+    border: 4px double var(--vampire-primary);
+}
+
+.wod5e .description-content {
+    background: unset;
+    border: none;
+}
+.window-app .window-content {
+    scrollbar-width: thin;
+}
+
+#chat-log {
+    scrollbar-width: thin;
+}
+
+.vampire-sheet .attribute, .skill {
+    padding-bottom: 4px;
+}
+/* Rollable Discipline CSS */
+.item-image.power-rollable img {
+    box-shadow: inset 1px 1px 4px 0 red;
+    border: 1px solid var(--vampire-primary);
+    filter: drop-shadow(2px 2px 1px grey);
+    border-radius: 4px;
+}
+
+.chat-message .roll-result-label {
+    font-size: 1.5em;
+    line-height: 1.1em;
+    font-weight: 700;
+    font-family: 'Vollkorn';
+    font-variant-caps: all-small-caps;
+    text-align: center;
+    border: none;
+}
+
+.chat-message .total-and-difficulty {
+    display: flex;
+    font-family: 'Vollkorn';
+    font-variant: all-small-caps;
+    font-size: 1.5em;
+    line-height: 1em;
+    flex-direction: row;
+    border: none;
+    border-bottom: 0;
+}
+
+.roll-result-label.messy-critical,
+.roll-result-label.failure,
+.roll-result-label.critical-failure,
+.roll-result-label.bestial-failure {
+    background-color: #590707 !important;
+    color: whitesmoke !important;
+}
+
+/* ConversationHUD SETTINGS */
+.conversation-hud-content .active-participant {
+    border: 4px double var(--player-color);
+    border-radius: 0;
+    box-shadow: 0 0 10px var(--player-color);
+}
+
+.conversation-hud-content .participant-drag-drop-container.active .conversation-participant {
+    border: 2px solid var(--player-color);
+    border-radius: 0;
+}
+
+.conversation-hud-content .conversation-participant.has-control:hover {
+    border: 2px solid #790813;
+    border-radius: 0;
+    box-shadow: 0 0 10px #790813;
+}
+
+/* 5.0 Changes */
+/* Glass Fix*/
+.actor.sheet .window-content section.tab {
+    overflow-y: scroll;
+    backdrop-filter: none !important;
+}
+
+
+.sheet.vampire button.vampire-button {
+    padding: 1px;
+	border: 1px solid white;
+}
+.wod5e .flexend {
+    margin-right: 5px;
+}
+.actor.sheet .actor-header input, .actor.sheet .actor-header .resource {
+    margin-bottom: 0px;
+}
+.sheet.vampire .frenzy {
+    margin-bottom: 0px;
+}
+.sheet.vampire .rouse-button .wod5e-symbol {
+    translate: 0% 5%;
+}
+button.rollable.rouse-button:hover {
+    background: #bb3030ef;
+}
+
+.dark-theme .actor.sheet.vampire .tabs-container .navicon .wod5e-symbol, .dark-theme .actor.sheet.vampire .tabs-container .item[data-tab="blood"] {
+    /* color: var(--vampire-primary); */
+	color: var(--system-dark-color-6);
+}
+.actor.sheet .actor-header .header-fields {
+    align-self: baseline;
+}
+.sheet.vampire .rouse-button {
+    max-width: 4em;
+    border: 1px solid white;
+    border-radius: 0;
+    margin: 0;
+}
+.resource.flex-group-center.hunger {
+    margin-right: 1rem;
+}
+.actor.sheet .actor-header .field-header {
+    justify-content: center;
+    margin-bottom: 0.01rem;
+    line-height: 1.5rem;
+    font-family: 'Vollkorn';
+    font-size: 1.3rem;
+    font-weight: bold;
+    font-variant: all-small-caps;
+    letter-spacing: 0.05rem;
+}
+.actor.sheet .actor-header .header-fields .header-fields-left .field-section, 
+.actor.sheet .actor-header .header-fields .header-fields-right .field-section {
+    margin-bottom: 5px;
+    width: 260px;
+}
+.willpower-roll i.fa-solid.fa-dice-d10 {
+    translate: 10% 5%;
+}
+.actor.sheet .lock-btn {
+    border: 1px solid white;
+    border-radius: 0;
+    background-color: var(--system-color-5);
+    color: #b90707;
+    margin: 5px;
+    border-radius: 10px;
+}
+.wod-dark-theme .actor.sheet .sheet-tabs .lock-btn{
+    color: #b90707;
+}
+.actor.sheet .lock-btn:hover {
+    background-color: darkgreen;
+    border-color: black;
+}
+i.fa.fa-lock-open {
+    color: darkgreen;
+}
+.dark-theme .sheet .journal-entry-content, 
+.dark-theme .dialog .journal-entry-content, 
+.dark-theme .sheet .window-content, 
+.dark-theme .dialog .window-content {
+    background-color: var(--vampire-color-3);
+    color: var(--system-dark-color-4);
+    background-blend-mode: multiply;
+}
+/* Actor Profile & Name Hack */
+.actor.sheet .actor-header .charname:not(input) {
+    font-size: 2.2rem;
+    font-family: 'Vollkorn';
+    width: 100%;
+    letter-spacing: 0.03em;
+    font-variant: small-caps;
+    font-weight: bold;
+    text-align: center;
+    backdrop-filter: none;
+    line-height: 2.2rem;
+    -webkit-text-stroke-width: 0;
+	text-shadow: 0px -1px 2px black, 2px 2px 3px #6b6b6b, 3px 3px 3px black;;
+}
+.vampire.sheet .actor-header .charname:not(input) {
+    text-shadow: 0px -1px 2px black, 2px 2px 3px var(--vampire-primary), 3px 3px 3px black;
+}
+/* ------ Name Hack End------- */
+
+.tabs > [data-tab].active {
+    text-shadow: 0 0 10px var(--vampire-primary);
+}
+.dark-theme .actor.sheet .sheet-tabs > [data-tab].active .navicon {
+    background: var(--system-dark-color-7);
+    border: 1px solid var(--vampire-color-4);
+    box-shadow: 2 2 2px var(--vampire-color-4);
+}
+.sheet .resource-header {
+    border-bottom: 0;
+    font-family: 'Vollkorn';
+    font-variant: all-small-caps;
+    letter-spacing: 0.02em;
+}
+.dark-theme .actor.sheet .item-list .item, .dark-theme .actor.sheet .resource, .dark-theme .actor.sheet prose-mirror .editor-content, .dark-theme .actor.sheet .actor-header input, .dark-theme .actor.sheet .actor-header .resource, .dark-theme .actor.sheet .stats-container, .dark-theme .actor.sheet .stats-container .stats-footer {
+    border-color: var(--vampire-color-3);
+}
+.actor.sheet .stats-content .skills-attributes, .actor.sheet .stats-content .custom-rolls {
+    font-family: 'Vollkorn';
+    letter-spacing: 0.02em;
+}
+.sheet .stats-content .stats-container.attributes .stats-footer {
+    border-bottom: 0;
+    font-variant-caps: all-small-caps;
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+.skills .grid.grid-3col.stats-footer {
+    display: none;
+}
+.actor.sheet .stats-container {
+    display: flex;
+    flex-flow: column;
+    margin: 5px;
+    margin-top: -5px;
+    padding: 0.2em;
+    font-size: 1rem;
+}
+.vampire .resource-header {
+    text-shadow: 0px -1px 3px var(--vampire-primary);
+    font-weight: bold;
+}
+.settings-sidebar #game-details, .settings-sidebar #settings-game, .settings-sidebar #settings-documentation, .settings-sidebar #settings-access, .settings-sidebar #license-information {
+    background: none;
+}
+.settings-sidebar h2 {
+    border-bottom: 4px double var(--player-color);
+    background: none;
+    font-family: 'Vollkorn';
+    font-variant: all-small-caps;
+    font-size: 1.6em;
+    font-weight: bold;
+    border-top: 0;
+    margin-bottom: -0.5rem;
+    line-height: 1em;
+	letter-spacing: 0.02rem;
+}
+.directory .action-buttons button {
+    background: var(--player-color);
+    color: var(--system-color-6);
+    border-radius: 2px;
+    border: 1px double var(--system-color-6);
+}
+.combat-sidebar .combat-tracker-header, .directory .directory-header {
+    border-bottom: 4px double var(--vampire-primary);
+    background: var(--system-color-11);
+    margin: 0.3em 0;
+    padding-bottom: 0.3em;
+}
+.dark-theme .chat-sidebar option, optgroup {
+    color: whitesmoke;
+    background: black;
+}
+.dice-result hr {
+    color: var(--player-color);
+    border: none;
+    border-top: 0;
+    border-bottom: 4px double var(--player-color);
+}
+.wod-dark-theme .actor.sheet .item-list .category .discipline-description, .wod-dark-theme .actor.sheet .item-list .category .edge-description, .wod-dark-theme .actor.sheet .item-list .category .gift-description {
+    color: whitesmoke;
+}
+.actor.sheet {
+    font-family: 'Vollkorn';
+}
+.CodeMirror {
+    background: antiquewhite !important;
+}
+.wod-dark-theme .vampire .actor.sheet .item-list .item, .wod-dark-theme .vampire .actor.sheet .resource, .wod-dark-theme .vampire .actor.sheet prose-mirror .editor-content, .wod-dark-theme .vampire .actor.sheet .actor-header input, .wod-dark-theme .vampire .actor.sheet .actor-header .resource, .wod-dark-theme .vampire .actor.sheet .stats-container, .wod-dark-theme .actor.sheet .stats-container .stats-footer {
+    border-color: color-mix(in srgb,var(--player-color),var(--system-dark-color-4));
+}
+
+.wod-dark-theme .vampire .sheet select, .wod-dark-theme .vampire .dialog select, .wod-dark-theme .vampire  .sheet input, .wod-dark-theme .vampire .dialog input {
+    border-color: color-mix(in srgb,var(--player-color),var(--system-dark-color-4));
+}
+
+.wod-dark-theme .vampire .actor.sheet .item-list .category {
+    border-color: color-mix(in srgb,var(--player-color),var(--system-dark-color-4));
+}
+.application hr {
+    color: var(--player-color);
+    background-image: linear-gradient(90deg, transparent 0%, var(--player-color) 50%, transparent 100%);
+}
+.chat-message .message-header .message-sender {
+    flex: auto;
+    font-family: 'Vollkorn', serif;
+    font-size: 1.05em;
+}
+.roll-label {
+    font-size: 1.2em;
+}
+p.roll-label.uppercase {
+    letter-spacing: 0.03rem;
+    line-height: 1.3rem;
+}
+h3.item-name {
+    font-family: Vollkorn, serif;
+    font-size: 1.2em;
+}
+.vampire.sheet .specialty {
+    text-shadow: 0 0 5px var(--vampire-color-1);
+}
+.vampire.sheet .rollable:hover, 
+.vampire.sheet .rollable-item:hover, 
+.vampire.sheet .system-rollable:hover {
+text-shadow: 0px 0px 5px var(--vampire-color-1);
+}
+#chat-log .message {
+    margin: 0.1rem;
+    border: 0;
+}
+div#chat-controls option {
+    color: black;
+}
+.chat-message img.item-image {
+    border-color: var(--vampire-color-1);
+}
+ .wod-dark-theme .actor.sheet .resource,
+ .wod-dark-theme .actor.sheet input,
+ .wod-dark-theme .actor.sheet select,
+ .wod-dark-theme .actor.sheet .category,
+ .wod-dark-theme .actor.sheet .stats-container {
+    border: 1px solid;
+	border-radius: 0;
+}
+ .wod-dark-theme .actor.sheet.vampire .resource,
+ .wod-dark-theme .actor.sheet.vampire input,
+ .wod-dark-theme .actor.sheet.vampire select,
+ .wod-dark-theme .actor.sheet.vampire .category,
+ .wod-dark-theme .actor.sheet.vampire .stats-container {
+    border: 1px solid var(--vampire-color-2);
+	border-radius: 0;
+}
+.actor.sheet.vampire .actor-header {
+    padding-bottom: 5px;
+    border-bottom: 4px double var(--vampire-color-2);
+}
