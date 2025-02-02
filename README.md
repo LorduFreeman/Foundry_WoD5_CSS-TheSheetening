@@ -3,3 +3,7 @@
 1. You need to install the Artificer UI module which is still in beta for the left-side bar and the glass-style AND the Custom CSS module to use the CSS code.
 2. Additionally you need an active internet connection for the Vollkorn font to work (it's imported using the CSS) - you can install it on the system manually instead if you need to.
 3. Paste the code from one of the "css" text files into your Custom CSS window.
+
+### V3 Styling
+1. V3 allows you to selectively use the colors for the splat you want, just replace the "vampire" in lines 5-7 with "werewolf" or "hunter"
+2. Similarly you can add custom colors instead as well.
