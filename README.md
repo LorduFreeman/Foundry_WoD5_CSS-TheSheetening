@@ -1,5 +1,5 @@
 ![image](https://github.com/user-attachments/assets/b1dcc2a7-6605-48a5-a8ab-76c1c74f0753)
-###V3 styling with Vampire colors changed to blue hues
+### V3 styling with Vampire colors changed to blue hues
 
 # How to use
 ### First: This currently only changes vampire sheets to your picked player color. Not any other sheet types, you need to modify that yourself.
